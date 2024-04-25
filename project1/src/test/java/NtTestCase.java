@@ -47,5 +47,46 @@ public class NtTestCase {
         
         Assertions.assertTrue(actual);
     }
+	
+	@Test 
+    public void testNtChan(){
+        int n = 2;
+        boolean expected = true;
+        boolean actual = Utils.ktNt(n);
+        
+        Assertions.assertEquals(expected, actual);
+    }
+    
+    @Test 
+    public void testNtLe(){
+        int n = 5;
+        boolean actual = Utils.ktNt(n);
+        
+        Assertions.assertTrue(actual);
+    }
+    
+    @Test 
+    public void testNtAm(){
+        int n = -3;
+        boolean actual = Utils.ktNt(n);
+        
+        Assertions.assertFalse(actual);
+    }
+
+    @Test 
+    public void testNtLonHon2(){
+        int n = 9;
+        boolean actual = Utils.ktNt(n);
+        
+        Assertions.assertTrue(actual);
+    }
+
+    @Test 
+    public void testNtKhongPhaiSnt(){
+        int n = 10;
+        boolean actual = Utils.ktNt(n);
+        
+        Assertions.assertFalse(actual);
+    }
     
 }
